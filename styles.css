@@ -1,0 +1,497 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Horizontal Project Layout */
+.project-container {
+    display: flex;
+    justify-content: flex-start;  /* Aligns items from the start */
+    align-items: center;
+    gap: 20px;  /* Space between each project */
+    overflow-x: auto;  /* Enables horizontal scrolling if needed */
+    padding: 20px;
+    white-space: nowrap;
+}
+
+.project {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;  /* Prevents shrinking */
+}
+
+/* Consistent Image Styling */
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.project:hover .overlay {
+    background: rgba(255, 165, 0, 0.8);
+}
+
+
+/* Modal Styling */
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    position: relative;  /* Ensure close button stays inside */
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+  
+  
+
+    max-height: 80vh;  /* Set maximum height */
+    overflow-y: auto;  /* Enable vertical scroll */
+}
+
+/* Customize Scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #FF6B6B;
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+}
+
+  
+
+/* Customize Scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #FF6B6B;
+    border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+}
+
+
+/* Close Button Inside Modal */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    background-color: #ff4c4c;
+    padding: 8px 12px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 1002;
+  }
+  
+  .close-btn:hover {
+    background-color: #fff;
+    color: #ff4c4c;
+  }
+  
+  
+  
+/* Make Modal Text Stand Out */
+.modal-content h2 {
+    color: #222;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.modal-content ul li {
+    font-size: 15px;
+    margin: 5px 0;
+}
+@media (min-width: 1024px) {
+    .modal-content {
+        width: 50%;
+        padding: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        max-height: 70vh;
+    }
+}
+
+
+
+/* Modal Content Text */
+.modal-content h2, .modal-content p, .modal-content ul, .modal-content li {
+    color: black;  /* Ensures the text color is visible */
+}
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Styling */
+section {
+    padding: 100px 50px;
+    background-color: #1f1f1f;
+    margin-bottom: 20px;
+    color: white;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+}
+
+/* Work Experience Styling */
+#experience ul {
+    list-style: none;
+}
+
+#experience li {
+    padding: 10px 0;
+}
+
+/* Resume Download Button */
+#resume .btn {
+    padding: 10px 20px;
+    background-color: #FF6B6B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#resume .btn:hover {
+    background-color: #ff8787;
+}
+/* Hero Section Layout */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    min-height: 100vh;
+    background-color: #1f1f1f;
+    flex-wrap: wrap;  /* Makes layout responsive */
+}
+
+/* Text Alignment Fix */
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hello Text - Bigger and Bold */
+.hero-content h3 {
+    color: #FF6B6B;
+    margin-bottom: 20px;
+    font-size: 28px;  /* Bigger font size */
+    font-weight: bold;
+}
+
+/* Name Section */
+.hero-content h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    line-height: 1.2;  /* Better line spacing */
+}
+
+/* Description Text */
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 300px;  /* Medium-sized image */
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+/* Work Experience Section */
+#work-experience {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .progress-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .progress-bar::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  
+  .step {
+    width: 150px; /* Adjust width for longer role names */
+    height: 50px;
+    background-color: #1f1f1f;
+    color: white;
+    border-radius: 25px; /* Rounded rectangle for better role display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .step.active, .step:hover {
+    background-color: #ff6600;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  
+  .work-details {
+    width: 60%;
+    background-color: #2a2a2a;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+  }
+  
+  .work-details h3 {
+    margin-bottom: 10px;
+  }
+  
+  .work-details p {
+    color: #bbb;
+  }
+  
+  .work-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .work-details ul li {
+    margin: 10px 0;
+    position: relative;
+  }
+  /* General styling for smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        padding: 0 15px;
+        text-align: justify;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+    }
+
+    .progress-container {
+        flex-direction: column;
+    }
+
+    .progress-bar {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 10px;
+    }
+
+    .work-details {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .btn {
+        width: 80%;
+        padding: 10px;
+    }
+}
+/* Fix for Home Page Text on Mobile */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 20px;
+        text-align: center; /* Center-align text */
+    }
+
+    .hero-content h2 {
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.5; /* Improve spacing */
+        word-spacing: normal;
+        padding: 0 10px; /* Add padding on sides */
+    }
+
+    .hero-image img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 400px) {
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+}
